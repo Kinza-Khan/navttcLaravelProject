@@ -1,0 +1,36 @@
+
+
+.showOn-video-bg
+{
+    display: none;
+}
+
+.volume-button
+{
+    font-size: 18px;
+
+    position: absolute;
+    z-index: 7;
+    bottom: 40px;
+    left: 50%;
+	margin-left:-30px;
+
+    cursor: pointer;
+
+    color: #000;
+}
+
+.stop-button
+{
+    font-size: 18px;
+
+    position: absolute;
+    z-index: 7;
+    bottom: 40px;
+    left: 50%;
+	margin-left:12px;
+
+    cursor: pointer;
+
+    color: #000;
+}
