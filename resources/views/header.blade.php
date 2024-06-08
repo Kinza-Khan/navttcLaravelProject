@@ -406,6 +406,12 @@
 				<li>
 					<a href="contact" class="animsition-link">Contact</a>
 				</li>
+				<li>
+					<a href="login" class="animsition-link">Login</a>
+				</li>
+				<li>
+					<a href="signup" class="animsition-link">Sign Up</a>
+				</li>
 				
 				<li>
 					<a href="cart" class="animsition-link"><i class="fa fa-fw">&#xf07a;</i>cart</a>

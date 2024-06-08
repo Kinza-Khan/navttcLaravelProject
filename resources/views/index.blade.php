@@ -375,7 +375,7 @@
 			<div class="call-to-action-1">
 				<div class="action-top-1">over 80 finished projects</div>
 				<h5>ALL WORKS</h5>
-				<a href="grid-2col.html" class="button-1 animsition-link">Discover</a>
+				<a href="grid-2col" class="button-1 animsition-link">Discover</a>
 			</div>
 		</section>		
 	

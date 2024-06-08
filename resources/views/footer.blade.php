@@ -2,7 +2,7 @@
 <section class="section footer-1 section-padding-top-bottom">	
 			<div class="container">
 				<div class="four columns" data-scroll-reveal="enter left move 200px over 0.5s after 0.8s">
-					<a href="index.html" class="animsition-link"><div class="logo-footer"></div></a>
+					<a href="index" class="animsition-link"><div class="logo-footer"></div></a>
 				</div>
 				<div class="four columns" data-scroll-reveal="enter left move 200px over 0.5s after 0.3s">
 					<h6><i class="icon-footer">&#xf041;</i>Kraljevo</h6>
@@ -38,7 +38,7 @@
 		<section class="section footer-bottom">	
 			<div class="container">
 				<div class="sixteen columns">
-					<p>© ALL RIGHTS RESERVED. MADE BY IG DESIGN 2014</p>
+					<p>© ALL RIGHTS RESERVED. Design and Developed BY LogiTech Solutions 2024</p>
 				</div>	
 			</div>
 		</section>
@@ -135,5 +135,5 @@
 ================================================== -->
 </body>
 
-<!-- Mirrored from ivang-design.com/clymene/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 16:50:22 GMT -->
+<!-- Mirrored from ivang-design.com/clymene/index by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 16:50:22 GMT -->
 </html>
