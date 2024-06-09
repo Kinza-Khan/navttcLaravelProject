@@ -10,7 +10,7 @@
 			
 				<div class="clear"></div>
 				
-				<form name="ajax-form" id="ajax-form" action="https://ivang-design.com/clymene/mail-it.php" method="post">
+				<form name="" id="ajax-form" action="" method="post">
 					<div class="eight columns">
 						<label for="name"> 
 							<span class="error" id="err-name">please enter name</span>
@@ -24,12 +24,21 @@
 						</label>
 						<input name="email" id="email" type="text"  placeholder="E-Mail: *"/>
 					</div>
-					<div class="sixteen columns">
-						<label for="message"></label>
-						<textarea name="message" id="message" placeholder="Tell Us Everything"></textarea>
+					<div class="eight columns">
+						<label for="password"> 
+							<span class="error" id="err-name">please enter Password</span>
+						</label>
+						<input name="password" id="password" type="password"   placeholder="Password: *"/>
+					</div>
+					<div class="eight columns">
+						<label for="confirm_password"> 
+							<span class="error" id="err-email">Confirm Password</span>
+							<span class="error" id="err-emailvld">e-mail is not a valid format</span>
+						</label>
+						<input name="confirm_password" id="confirm_password" type="password"  placeholder="Confirm Password: *"/>
 					</div>
 					<div class="sixteen columns">
-						<div id="button-con"><button class="send_message" id="send">submit</button></div>
+						<div id="button-con"><button class="send_message" name="submitSignup" id="send">submit</button></div>
 					</div>
 					<div class="clear"></div>	
 					<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>

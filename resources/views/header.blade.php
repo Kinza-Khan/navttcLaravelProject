@@ -153,7 +153,7 @@
 										<li class="go-back"><a href="#0">Home</a></li>
 										<li><a href="shop-home-1.html" class="animsition-link">Shop Layout 1</a></li>
 										<li><a href="shop-home-2.html" class="animsition-link">Shop Layout 2</a></li>
-										<li><a href="shop-home-3.html" class="animsition-link">Shop Layout 3</a></li>
+										<li><a href="index" class="animsition-link">Shop Layout 3</a></li>
 									</ul>
 								</li>
 								<li class="has-children">
