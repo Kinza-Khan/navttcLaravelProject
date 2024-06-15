@@ -10,18 +10,19 @@
 				</div>
 			
 				<div class="clear"></div>
-				
+				@if(session('success'))
+					<div style="color: green;">
+						{{ session('success') }}
+					</div>
+				@endif
+
+				@if(session('error'))
+					<div style="color: red;">
+						{{ session('error') }}
+					</div>
+				@endif
 				<form name="" id="" action="{{ route('userLogin') }}" method="post">
 					@csrf
-					<div class="eight columns">
-						<label for="">Your Name:</label>
-						<input name="user_name" id="" type="text" value="">
-						{{-- @dump($errors->all()) --}}
-						@error('user_name')
-							<span class="error">{{ $message }}</span>
-						@enderror
-					</div>
-
 					<div class="eight columns">
 						<label for="">E-Mail:</label>
 						<input name="user_email" id="" type="email" value="">
