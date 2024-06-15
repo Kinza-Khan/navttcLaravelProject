@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\loginController;
+use App\Http\Controllers\signupController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -53,13 +55,15 @@ Route::get('gallery-project', function () {
 Route::get('fullscreen-project', function () {
     return view('fullscreen-project');
 });
+
 Route::get('login', function () {
     return view('login');
-});
+})->name('login');
+
 Route::get('signup', function () {
     return view('signup');
 });
 
-Route::post('submitSignup', function () {
-    return view('signup');
-});
+Route::post('submitSignup', [signupController::class, 'registerUser'])->name('submitSignup');
+
+Route::post('userLogin', [loginController::class, 'loginUser'])->name('userLogin');

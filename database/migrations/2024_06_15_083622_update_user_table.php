@@ -11,12 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('customerMsgs', function (Blueprint $table) {
-            $table->id();
-            $table->string('user_name');
-            $table->string('user_email');
-            $table->string('user_message');
-            $table->timestamps();
+        Schema::table('users', function (Blueprint $table) {
+            $table->renameColumn('name', 'user_name');
+            $table->renameColumn('email', 'user_email');
+            $table->renameColumn('password', 'user_password');
         });
     }
 
