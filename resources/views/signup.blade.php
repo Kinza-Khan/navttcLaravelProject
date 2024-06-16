@@ -8,45 +8,36 @@
         </div>
 
         <div class="clear"></div>
-        @if ($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-        <form name="" id="" action="{{ route('submitSignup') }}" method="post">
+        
+        <form action="{{ route('register') }}" method="post">
             @csrf
             <div class="eight columns">
                 <label for="">Your Name:</label>
-                <input name="user_name" id="" type="text" value="">
-                {{-- @dump($errors->all()) --}}
-                @error('user_name')
+                <input name="name" id="" type="text" value="">
+                {{-- @error('user_name')
                     <span class="error">{{ $message }}</span>
-                @enderror
+                @enderror --}}
             </div>
 
             <div class="eight columns">
                 <label for="">E-Mail:</label>
-                <input name="user_email" id="" type="text" value="">
-                @if ($errors->has('user_email'))
+                <input name="email" id="" type="text" value="">
+                {{-- @if ($errors->has('user_email'))
                     <span class="error" id="">{{ $errors->first('user_email') }}</span>
-                @endif
+                @endif --}}
             </div>
 
             <div class="eight columns">
                 <label for="">Password:</label>
-                <input name="user_password" id="" type="password">
-                @if ($errors->has('user_password'))
+                <input name="password" id="" type="password">
+                {{-- @if ($errors->has('user_password'))
                     <span class="error" id="">{{ $errors->first('user_password') }}</span>
-                @endif
+                @endif --}}
             </div>
 
             <div class="eight columns">
                 <label for="">Confirm Password:</label>
-                <input name="user_password_confirmation" id="" type="password">
+                <input name="password_confirmation" id="" type="password">
                 
             </div>
 
@@ -54,10 +45,15 @@
                 <div id="button-con"><button class="send_message" id="">submit</button></div>
             </div>
         </form>	
-
-        <div class="clear"></div>
-        <div id="ajaxsuccess">Successfully sent!!</div>	
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     </div>
-    <div class="clear"></div>
 </section>	
 @include("footer")
