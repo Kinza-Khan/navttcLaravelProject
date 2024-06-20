@@ -34,9 +34,19 @@ Route::view('gallery-project','gallery-project')->name('gallery-project');
 Route::view('fullscreen-project','fullscreen-project')->name('fullscreen-project');
 
 
-Route::view('signup','signup')->name('signup');
-Route::post('register', [userController::class, 'registerUser'])->name('register');
+// Route::view('signup','signup')->name('signup');
+// Route::post('register', [userController::class, 'registerUser'])->name('register');
 
-Route::view('login','login')->name('login');
-Route::post('loginUser', [userController::class, 'loginUser'])->name('loginUser');
+// Route::view('login','login')->name('login');
+// Route::post('loginUser', [userController::class, 'loginUser'])->name('loginUser');
 
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('index');
+    })->name('dashboard');
+});

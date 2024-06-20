@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
 <!--[if gt IE 8]>
-<!--><html class="no-js" lang="en"><!--<![endif]-->
+<!--><html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}"><!--<![endif]-->
 
 <!-- Mirrored from ivang-design.com/clymene/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 06 May 2024 16:49:18 GMT -->
 <head>
@@ -98,7 +98,7 @@
 				<li><a class="cd-nav-trigger" href="#cd-primary-nav"><span></span></a></li>
 			</ul> <!-- cd-header-buttons -->
 		</header>
-		
+		@if (Route::has('login'))
 		<nav class="cd-nav">
 			<ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
 				<li>
@@ -230,12 +230,40 @@
 				<li>
 					<a href="{{ route('contact') }}" class="animsition-link">Contact</a>
 				</li>
-				<li>
-					<a href="{{ route('login') }}" class="animsition-link">Login</a>
-				</li>
-				<li>
-					<a href="{{ route('signup') }}" class="animsition-link">Sign Up</a>
-				</li>
+				@auth
+								<li>
+									<a
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                    >
+									<form method="POST" action="{{ route('logout') }}">
+										@csrf
+										<button type="submit" >
+											{{ __('Logout') }}
+										</button>
+										
+									</form>
+                                    </a>
+								</li>
+                                @else
+								<li>
+                                    <a
+                                        href="{{ route('login') }}"
+                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                    >
+                                        Log in
+                                    </a>
+								</li>
+                                    @if (Route::has('register'))
+									<li>
+                                        <a
+                                            href="{{ route('register') }}"
+                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20]"
+                                        >
+                                            Register
+                                        </a>
+									</li>
+                                    @endif
+                                @endauth
 				
 				<li>
 					<a href="cart" class="animsition-link"><i class="fa fa-fw">&#xf07a;</i>cart</a>
@@ -243,7 +271,7 @@
 				
 			</ul> <!-- primary-nav -->
 		</nav> <!-- cd-nav -->
-
+		@endif
 		<div id="cd-search" class="cd-search">
 			<form>
 				<input type="search" placeholder="Search...">
