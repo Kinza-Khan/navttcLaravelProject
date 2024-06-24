@@ -1,61 +1,52 @@
 <?php
 
+use App\Http\Controllers\userController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('index');
-});
-// Route::get('home', function () {
-//     return view('index');
-// });
+Route::view('/','index')->name('/');
 
-Route::get('shop-all', function () {
-    return view('shop-all');
-});
+Route::view('shop-all','shop-all')->name('shop-all');
 
-Route::get('shop-1', function () {
-    return view('shop-1');
-});
+Route::view('shop-1','shop-1')->name('shop-1');
 
-Route::get('shop-2', function () {
-    return view('shop-2');
-});
+Route::view('shop-2','shop-2')->name('shop-2');
 
-Route::get('shop-4', function () {
-    return view('shop-4');
-});
+Route::view('shop-4','shop-4')->name('shop-4');
 
-Route::get('contact', function () {
-    return view('contact');
-});
+Route::view('shop-4','shop-4')->name('shop-4');
 
-Route::get('cart', function () {
-    return view('cart');
-});
-Route::get('shop-item', function () {
-    return view('shop-item');
-});
-Route::get('grid-2col', function () {
-    return view('grid-2col');
-});
-Route::get('slider-project', function () {
-    return view('slider-project');
-});
-Route::get('video-project', function () {
-    return view('video-project');
-});
-Route::get('parallax-project', function () {
-    return view('parallax-project');
-});
-Route::get('gallery-project', function () {
-    return view('gallery-project');
-});
-Route::get('fullscreen-project', function () {
-    return view('fullscreen-project');
-});
-Route::get('login', function () {
-    return view('login');
-});
-Route::get('signup', function () {
-    return view('signup');
+Route::view('contact','contact')->name('contact');
+
+Route::view('cart','cart')->name('cart');
+
+Route::view('shop-item','shop-item')->name('shop-item');
+
+Route::view('grid-2col','grid-2col')->name('grid-2col');
+
+Route::view('slider-project','slider-project')->name('slider-project');
+
+Route::view('video-project','video-project')->name('video-project');
+
+Route::view('parallax-project','parallax-project')->name('parallax-project');
+
+Route::view('gallery-project','gallery-project')->name('gallery-project');
+
+Route::view('fullscreen-project','fullscreen-project')->name('fullscreen-project');
+
+
+// Route::view('signup','signup')->name('signup');
+// Route::post('register', [userController::class, 'registerUser'])->name('register');
+
+// Route::view('login','login')->name('login');
+// Route::post('loginUser', [userController::class, 'loginUser'])->name('loginUser');
+
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('index');
+    })->name('dashboard');
 });

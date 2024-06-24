@@ -11,37 +11,36 @@
 			
 				<div class="clear"></div>
 				
-				<form name="ajax-form" id="ajax-form" action="https://ivang-design.com/clymene/mail-it.php" method="post">
+				<form action="{{ route('loginUser') }}" method="post">
+					@csrf
 					<div class="eight columns">
-						<label for="name"> 
-							<span class="error" id="err-name">please enter name</span>
-						</label>
-						<input name="name" id="name" type="text"   placeholder="Your Name: *"/>
+						<label for="">E-Mail:</label>
+						<input name="email" id="" type="email" value="">
+						{{-- @if ($errors->has('user_email'))
+							<span class="error" id="err-email">{{ $errors->first('user_email') }}</span>
+						@endif --}}
 					</div>
+
 					<div class="eight columns">
-						<label for="email"> 
-							<span class="error" id="err-email">please enter e-mail</span>
-							<span class="error" id="err-emailvld">e-mail is not a valid format</span>
-						</label>
-						<input name="email" id="email" type="text"  placeholder="E-Mail: *"/>
+						<label for="">Password:</label>
+						<input name="password" id="" type="password">
+						{{-- @if ($errors->has('user_password'))
+							<span class="error" id="err-password">{{ $errors->first('user_password') }}</span>
+						@endif --}}
 					</div>
 					<div class="sixteen columns">
-						<label for="message"></label>
-						<textarea name="message" id="message" placeholder="Tell Us Everything"></textarea>
+						<div id="button-con"><button class="send_message" id="">submit</button></div>
 					</div>
-					<div class="sixteen columns">
-						<div id="button-con"><button class="send_message" id="send">submit</button></div>
-					</div>
-					<div class="clear"></div>	
-					<div class="error text-align-center" id="err-form">There was a problem validating the form please check!</div>
-					<div class="error text-align-center" id="err-timedout">The connection to the server timed out!</div>
-					<div class="error" id="err-state"></div>
 				</form>	
-				
-				<div class="clear"></div>
-				
-				<div id="ajaxsuccess">Successfully sent!!</div>	
-				
+				@if ($errors->any())
+					<div class="alert alert-danger">
+						<ul>
+							@foreach ($errors->all() as $error)
+								<li>{{ $error }}</li>
+							@endforeach
+						</ul>
+					</div>
+				@endif
 			</div>
 			
 			<div class="clear"></div>
