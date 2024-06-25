@@ -102,6 +102,8 @@
 </script>
 
 <script type="text/javascript" src="js/smoothScroll.js"></script>
+<script type="text/javascript" src="js/masonry.js"></script> 
+<script type="text/javascript" src="js/isotope.js"></script>
 <script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
 <script type="text/javascript" src="js/jquery.counterup.min.js"></script>
 <script type="text/javascript" src="js/waypoints.min.js"></script>
@@ -113,6 +115,7 @@
 	})(jQuery);
 </script>
 
+<script type="text/javascript" src="js/jquery.colorbox.js"></script>
 <script type="text/javascript" src="js/owl.carousel.min.js"></script>
 
 <script type="text/javascript"> 
@@ -138,7 +141,9 @@
 </script>
 
 <script type="text/javascript" src="js/styleswitcher.js"></script>
-<script type="text/javascript" src="js/custom-index.js"></script>  	  
+<script type="text/javascript" src="js/custom-index.js"></script> 
+<script type="text/javascript" src="js/custom-shop-home-3.js"></script>  	  
+
 <!-- End Document
 ================================================== -->
 </body>
