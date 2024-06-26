@@ -143,7 +143,9 @@
 <script type="text/javascript" src="js/styleswitcher.js"></script>
 <script type="text/javascript" src="js/custom-index.js"></script> 
 <script type="text/javascript" src="js/custom-shop-home-3.js"></script>  	  
-
+<script type="text/javascript" src="js/custom-contact.js"></script>  	  
+<script type="text/javascript" src="js/contact.js"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
 <!-- End Document
 ================================================== -->
 </body>
