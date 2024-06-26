@@ -3,8 +3,8 @@
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 
-//Route::view('/','index')->name('/');
-Route::get('/', [productController::class, 'index'])->name('index');
+Route::view('/','index')->name('/');
+//Route::get('/', [productController::class, 'index'])->name('index');
 
 Route::view('shop-all','shop-all')->name('shop-all');
 

@@ -16,7 +16,7 @@ class productFactory extends Factory
      */
     public function definition(): array
     {
-        $categories = [1, 2, 3,4];
+        $categories = [1, 2];
         $images = [
             'images/shop/1.jpg',
             'images/shop/2.jpg',

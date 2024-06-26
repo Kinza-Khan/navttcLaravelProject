@@ -55,26 +55,30 @@
 				</div>
 			</div>
 			<div class="clear"></div>
-		
+			
+
 			<div class="shop-wrapper">
 				<div id="shop-grid-masonry">
-					@if(isset($products) && $products->count() > 0)
-					@foreach($products as $product)
-					<div class="shop-box-3 men">
+					@if(isset($allData) && $allData->count() > 0)
+					@foreach($allData as $data)
+					<div class="shop-box-3 {{ $data->name }}">
+						
 						<div class="shop-box grey-section">
+
 							@php
-								$pictures = json_decode($product->pictures, true);
+								$pictures = json_decode($data->product->pictures, true);
 							@endphp
 
 							@if(is_array($pictures) && count($pictures) > 0)
-								<img src="{{ asset($pictures[0]) }}" alt="{{ $product->name }}" >
-								{{  dd($pictures);}}
+								<img src="{{ asset($pictures[0]) }}" alt="" >
+
 							@else
 								<p>No pictures available</p>
 							@endif
+
 							<div class="mask-shop-white"></div>
-							<div class="shop-price"><span>$150</span></br>{{ $product->price }}</div>
-							<a class="animsition-link" href="shop-item.html"><h5>{{ $product->name }}</h5></a>
+							<div class="shop-price"><span>$150</span></br>{{ $data->product->price }}</div>
+							<a class="animsition-link" href="shop-item.html"><h5>{{ $data->product->name }}</h5></a>
 							<a class="animsition-link" href="shop-item"><div class="mask-left-shop">&#xf06e;</div></a>
 							<a href="#"><div class="mask-right-shop">&#xf07a;</div></a>
 						</div>
