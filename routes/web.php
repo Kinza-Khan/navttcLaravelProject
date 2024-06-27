@@ -1,6 +1,6 @@
 <?php
 use App\Http\Controllers\contactController;
-
+use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\productController;
 use Illuminate\Support\Facades\Route;
 
@@ -52,3 +52,5 @@ Route::middleware([
 });
 
 Route::post('/contact', [contactController::class, 'submitForm'])->name('contact.submit');
+
+Route::get('/dashboard_index', [dashboardController::class, 'view'])->name('dashboard_index');
