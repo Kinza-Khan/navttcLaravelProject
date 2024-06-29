@@ -57,7 +57,7 @@
 						<div class="num-itm-ic">&#xf068;</div>
 						<div class="num-itm">1</div>
 						<div class="num-itm-ic">&#xf067;</div>
-						<a href="#"><div class="button-shop">add to cart</div></a>
+						<a href="cart"><div class="button-shop">add to cart</div></a>
 					</div>
 					<div class="after-button">
 						<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>

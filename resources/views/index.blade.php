@@ -77,9 +77,9 @@
 
 									<div class="mask-shop-white"></div>
 									<div class="shop-price"><span>$150</span></br>{{ $product->price }}</div>
-									<a class="animsition-link" href="shop-item.html"><h5>{{ $product->name }}</h5></a>
+									<a class="animsition-link" href="shop-item"><h5>{{ $product->name }}</h5></a>
 									<a class="animsition-link" href="shop-item"><div class="mask-left-shop">&#xf06e;</div></a>
-									<a href="#"><div class="mask-right-shop">&#xf07a;</div></a>
+									<a href="cart"><div class="mask-right-shop">&#xf07a;</div></a>
 								</div>
 							</div>
 						@endforeach
