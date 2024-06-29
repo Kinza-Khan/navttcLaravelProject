@@ -11,7 +11,7 @@ class productController extends Controller
     public function index()
     {
         $allData = category::with('products')->get();
-        //dd($products);
+        //dd($allData);
         return view('index', compact('allData'));
     }
 }

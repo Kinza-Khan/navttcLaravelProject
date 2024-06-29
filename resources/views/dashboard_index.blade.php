@@ -332,8 +332,8 @@
                    <img src="assets/images/avatars/01.png" alt="">
                 </div>
                 <div class="user-info">
-                  <h5 class="mb-0 user-name">Jhon Maxwell</h5>
-                  <p class="mb-0 user-designation">UI Engineer</p>
+                  <h5 class="mb-0 user-name">{{ Auth::user()->name }}</h5>
+                  <p class="mb-0 user-designation">{{ Auth::user()->usertype }}</p>
                 </div>
               </div>
               <ul class="dropdown-menu dropdown-menu-end">
@@ -360,9 +360,11 @@
                 <li>
                   <div class="dropdown-divider mb-0"></div>
                 </li>
-                <li><a class="dropdown-item" href="javascript:;"><span class="material-symbols-outlined me-2">
-                  logout
-                  </span><span>Logout</span></a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>
+                <li>
+                  <a class="dropdown-item" href="javascript:void(0);" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><span class="material-symbols-outlined me-2">{{ __('Logout') }}</span><span>Logout</span></a>
                 </li>
               </ul>
           </div>

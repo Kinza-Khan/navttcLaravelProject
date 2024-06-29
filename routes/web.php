@@ -2,6 +2,8 @@
 use App\Http\Controllers\contactController;
 use App\Http\Controllers\dashboardController;
 use App\Http\Controllers\productController;
+use App\Http\Controllers\homeController;
+
 use Illuminate\Support\Facades\Route;
 
 Route::view('/','index')->name('/');
@@ -35,20 +37,14 @@ Route::view('gallery-project','gallery-project')->name('gallery-project');
 
 Route::view('fullscreen-project','fullscreen-project')->name('fullscreen-project');
 
-
-// Route::view('signup','signup')->name('signup');
-// Route::post('register', [userController::class, 'registerUser'])->name('register');
-
-// Route::view('login','login')->name('login');
-// Route::post('loginUser', [userController::class, 'loginUser'])->name('loginUser');
-
+Route::get('/dashboard', [homeController::class, 'index'])->name('dashboard');
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', [productController::class, 'index'])->name('dashboard');
+    Route::get('/user_index', [productController::class, 'index'])->name('user_index');
 });
 
 Route::post('/contact', [contactController::class, 'submitForm'])->name('contact.submit');
